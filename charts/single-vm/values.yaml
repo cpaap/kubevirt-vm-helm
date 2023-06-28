@@ -12,5 +12,3 @@ resources:
     cpu: 1
 
 networks:
-  - name: net1-cldbr1nondpdk-98
-    interface: net-1

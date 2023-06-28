@@ -3,9 +3,9 @@ entries:
   Credit_Processing_VM:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-06-28T14:56:10.40461757-04:00"
+    created: "2023-06-28T15:21:13.905926813-04:00"
     description: A Helm chart for KubeVirt which deploys single vm
-    digest: 2437d4b2b204579a535439897651fe4279fab83ede59cff568f50e2114d850c3
+    digest: ba41aab79d779e47baa199b94ba79e00f4238997a65f0788d9394f7e7ca78cae
     icon: https://raw.githubusercontent.com/Platform9-Community/kubevirt-vm-helm/main/icon.png
     name: Credit_Processing_VM
     urls:
@@ -14,7 +14,7 @@ entries:
   single-vm:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-06-28T14:56:10.405107536-04:00"
+    created: "2023-06-28T15:21:13.906142022-04:00"
     description: A Helm chart for KubeVirt which deploys single vm
     digest: 8cad03ea2aaaedcef81c18138618e88846a68bb1103ae83dbb1cfe0861645a9f
     icon: https://raw.githubusercontent.com/Platform9-Community/kubevirt-vm-helm/main/icon.png
@@ -22,4 +22,4 @@ entries:
     urls:
     - https://platform9-community.github.io/kubevirt-vm-helm/single-vm-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-28T14:56:10.403830818-04:00"
+generated: "2023-06-28T15:21:13.905531353-04:00"
