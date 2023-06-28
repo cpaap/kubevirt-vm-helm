@@ -1,0 +1,16 @@
+metadata:
+  name: test-fedora-vm
+
+image:
+  repository: kubevirt
+  name: fedora-cloud-container-disk-demo
+  tag: latest
+
+resources:
+  requests:
+    memory: 1024Mi
+    cpu: 1
+
+networks:
+  - name: net1-cldbr1nondpdk-98
+    interface: net-1

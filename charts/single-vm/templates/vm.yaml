@@ -1,0 +1,51 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  name: {{ .Values.metadata.name }}
+spec:
+  running: true
+  template:
+    metadata:
+      labels:
+        debugLogs: "true"
+        kubevirt.io/size: small
+    spec:
+      terminationGracePeriodSeconds: 0
+      domain:
+        resources:
+          requests:
+            memory: {{ .Values.resources.requests.memory }}
+            cpu: {{ .Values.resources.requests.cpu }}
+        devices:
+          disks:
+            - name: containerdisk
+              disk:
+                bus: virtio
+            - name: cloudinitdisk
+              disk:
+                bus: virtio
+          interfaces:
+          {{- range .Values.networks }}
+            - name: {{ .interface }}
+              bridge: {}
+          {{- end }}
+            - name: default
+              masquerade: {}
+      networks:
+        {{- range .Values.networks }}
+        - name: {{ .interface }}
+          multus:
+            networkName: {{ .name }}
+        {{- end }}
+        - name: default
+          pod: {}
+      volumes:
+        - name: containerdisk
+          containerDisk:
+            image: "{{ .Values.image.repository }}/{{ .Values.image.name }}:{{ .Values.image.tag }}"
+        - name: cloudinitdisk
+          cloudInitNoCloud:
+            userData: |-
+              #cloud-config
+              password: fedora
+              chpasswd: { expire: False }
