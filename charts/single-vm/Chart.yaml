@@ -3,3 +3,4 @@ appVersion: "1.0"
 description: A Helm chart for KubeVirt which deploys single vm
 name: single-vm
 version: 0.1.0
+icon: https://platform9.slack.com/files/U88SA1FTJ/F05ESJX743E/image.png
