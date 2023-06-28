@@ -3,11 +3,11 @@ entries:
   single-vm:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2023-06-28T14:09:38.493152915-04:00"
+    created: "2023-06-28T14:21:25.996852736-04:00"
     description: A Helm chart for KubeVirt which deploys single vm
-    digest: 1ee3d8df2eacc5a70c2a6935f6d08c0ab806d468d760711f55d5d7dcdbf76074
+    digest: d80c37624532a29ff55895ff6006bab0970cf295b9a7bd8f241280c27cded626
     name: single-vm
     urls:
     - https://platform9-community.github.io/kubevirt-vm-helm/single-vm-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-28T14:09:38.492707845-04:00"
+generated: "2023-06-28T14:21:25.996281923-04:00"
